@@ -1,0 +1,56 @@
+Changes:
+- Fix delete key problem introduced in commits c46d929fe18e4a3c9c41101eafa7a9668c8c8830 and 9d9e049eac3dacb2725f9d792f7cdd2230062313
+- See also https://bbs.archlinux.org/viewtopic.php?id=186522
+
+Index: st-patches/st/config.def.h
+===================================================================
+--- st-patches.orig/st/config.def.h
++++ st-patches/st/config.def.h
+@@ -205,7 +205,7 @@ static Key key[] = {
+ 	{ XK_KP_Delete,     ShiftMask,      "\033[2K",      -1,    0,    0},
+ 	{ XK_KP_Delete,     ShiftMask,      "\033[3;2~",    +1,    0,    0},
+ 	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[P",       -1,    0,    0},
+-	{ XK_KP_Delete,     XK_ANY_MOD,     "\177",         +1,    0,    0},
++	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[3~",      +1,    0,    0},
+ 	{ XK_KP_Multiply,   XK_ANY_MOD,     "\033Oj",       +2,    0,    0},
+ 	{ XK_KP_Add,        XK_ANY_MOD,     "\033Ok",       +2,    0,    0},
+ 	{ XK_KP_Enter,      XK_ANY_MOD,     "\033OM",       +2,    0,    0},
+@@ -224,6 +224,7 @@ static Key key[] = {
+ 	{ XK_KP_7,          XK_ANY_MOD,     "\033Ow",       +2,    0,    0},
+ 	{ XK_KP_8,          XK_ANY_MOD,     "\033Ox",       +2,    0,    0},
+ 	{ XK_KP_9,          XK_ANY_MOD,     "\033Oy",       +2,    0,    0},
++	{ XK_BackSpace,     XK_NO_MOD,      "\177",          0,    0,    0},
+ 	{ XK_Up,            ShiftMask,      "\033[1;2A",     0,    0,    0},
+ 	{ XK_Up,            ControlMask,    "\033[1;5A",     0,    0,    0},
+ 	{ XK_Up,            Mod1Mask,       "\033[1;3A",     0,    0,    0},
+@@ -260,7 +261,7 @@ static Key key[] = {
+ 	{ XK_Delete,        ShiftMask,      "\033[2K",      -1,    0,    0},
+ 	{ XK_Delete,        ShiftMask,      "\033[3;2~",    +1,    0,    0},
+ 	{ XK_Delete,        XK_ANY_MOD,     "\033[P",       -1,    0,    0},
+-	{ XK_Delete,        XK_ANY_MOD,     "\177",         +1,    0,    0},
++	{ XK_Delete,        XK_ANY_MOD,     "\033[3~",      +1,    0,    0},
+ 	{ XK_Home,          ShiftMask,      "\033[2J",       0,   -1,    0},
+ 	{ XK_Home,          ShiftMask,      "\033[1;2H",     0,   +1,    0},
+ 	{ XK_Home,          XK_ANY_MOD,     "\033[H",        0,   -1,    0},
+Index: st-patches/st/st.info
+===================================================================
+--- st-patches.orig/st/st.info
++++ st-patches/st/st.info
+@@ -53,7 +53,7 @@ st| simpleterm,
+ 	ka3=\E[5~,
+ 	kc1=\E[4~,
+ 	kc3=\E[6~,
+-	kbs=\010,
++	kbs=\177,
+ 	kcbt=\E[Z,
+ 	kb2=\EOu,
+ 	kcub1=\EOD,
+@@ -73,7 +73,7 @@ st| simpleterm,
+ 	kri=\E[1;2A,
+ 	kclr=\E[3;5~,
+ 	kdl1=\E[3;2~,
+-	kdch1=\0177,
++	kdch1=\E[3~,
+ 	kich1=\E[2~,
+ 	kend=\E[4~,
+ 	kf1=\EOP,

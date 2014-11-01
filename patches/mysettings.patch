@@ -1,0 +1,97 @@
+Changes:
+- Enable 8 bit input (st-meta-256color)
+- Enable powerline font Source Code Pro
+- Add more word delimiting characters
+- Adjust colors to my taste :-)
+
+Index: st-patches/st/config.def.h
+===================================================================
+--- st-patches.orig/st/config.def.h
++++ st-patches/st/config.def.h
+@@ -5,7 +5,9 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
++static char font[] = "Sauce Code Powerline:pixelsize=12:antialias=true:autohint=true";
++/* static char font[] = "Source Code Pro:pixelsize=11:antialias=true:autohint=true"; */
++/* static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false"; */
+ static int borderpx = 2;
+ static char shell[] = "/bin/sh";
+ static char *utmp = NULL;
+@@ -22,7 +24,7 @@ static float chscale = 1.0;
+  *
+  * More advanced example: " `'\"()[]{}"
+  */
+-static char worddelimiters[] = " ";
++static char worddelimiters[] = " │┤├┬┴`&()*,;<=>?@[]^{|}#\042\047:„“«»";
+ 
+ /* selection timeouts (in milliseconds) */
+ static unsigned int doubleclicktimeout = 300;
+@@ -48,7 +50,7 @@ static unsigned int blinktimeout = 800;
+ static int bellvolume = 0;
+ 
+ /* TERM value */
+-static char termname[] = "st-256color";
++static char termname[] = "st-meta-256color";
+ 
+ static unsigned int tabspaces = 8;
+ 
+@@ -56,29 +58,29 @@ static unsigned int tabspaces = 8;
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+ 	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
++	"#222222",
++	"#af0000",
++	"#008700",
++	"#af8700",
++	"#87afd7",
++	"#870087",
++	"#0087af",
++	"#9e9e9e",
+ 
+ 	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
++	"#6a6a6a",
++	"#d70000",
++	"#00af00",
++	"#ffaf00",
++	"#0087d7",
++	"#af00af",
++	"#00afd7",
++	"#eeeeee",
+ 
+ 	[255] = 0,
+ 
+ 	/* more colors can be added after 255 to use with DefaultXX */
+-	"#cccccc",
++	"#87afd7",
+ };
+ 
+ 
+@@ -86,8 +88,8 @@ static const char *colorname[] = {
+  * Default colors (colorname index)
+  * foreground, background, cursor
+  */
+-static unsigned int defaultfg = 7;
+-static unsigned int defaultbg = 0;
++static unsigned int defaultfg = 0;
++static unsigned int defaultbg = 15;
+ static unsigned int defaultcs = 256;
+ 
+ /*
