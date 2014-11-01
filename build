@@ -1,0 +1,2 @@
+#!/bin/sh
+cd st && rm -f config.h && make

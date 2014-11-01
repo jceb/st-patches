@@ -13,12 +13,17 @@
 
     quilt push -a
 
-## build dwm (or us the ./build script)
+## build st (or us the ./build script)
 
     cd st
     rm -f config.h
     make
 
+## install st locally (or use ./install script)
+
+    make DESTDIR=~/.local PREFIX= install
+
 # Patch References
 
 * [mysettings.patch](patches/mysettings.patch)                           (no URL yet)
+* [fix_delete_key.patch](patches/fix_delete_key.patch)                   (no URL yet)
