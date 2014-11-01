@@ -1,2 +1,2 @@
 #!/bin/sh
-"$(dirname "$0")/build" && cd st && make DESTDIR=~/.local PREFIX= install
+cd "$(dirname "$0")" && ./build && cd st && make DESTDIR=~/.local PREFIX= install

@@ -1,2 +1,2 @@
 #!/bin/sh
-cd st && rm -f config.h && make
+cd "$(dirname "$0")" && cd st && rm -f config.h && make
