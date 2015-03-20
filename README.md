@@ -26,4 +26,3 @@
 # Patch References
 
 * [mysettings.patch](patches/mysettings.patch)                           (no URL yet)
-* [fix_delete_key.patch](patches/fix_delete_key.patch)                   (no URL yet)
