@@ -24,7 +24,7 @@ Index: st-patches/st/config.def.h
   * More advanced example: " `'\"()[]{}"
   */
 -static char worddelimiters[] = " ";
-+static char worddelimiters[] = " │┤├┬┴`&()*,;<=>?@[]^{|}#\042\047:„“«»";
++static char worddelimiters[] = " |│┤├┬┴\"`'„“«»&()[]{}*,;<>=?@^#\042\047:";
  
  /* selection timeouts (in milliseconds) */
  static unsigned int doubleclicktimeout = 300;
