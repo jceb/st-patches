@@ -17,9 +17,9 @@ Index: st-patches/st/config.def.h
 +/* static char font[] = "Source Code Pro:pixelsize=11:antialias=true:autohint=true"; */
 +/* static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false"; */
  static int borderpx = 2;
- static char shell[] = "/bin/sh";
- static char *utmp = NULL;
-@@ -23,7 +25,7 @@ static float chscale = 1.0;
+ 
+ /*
+@@ -32,7 +34,7 @@ static float chscale = 1.0;
   *
   * More advanced example: " `'\"()[]{}"
   */
@@ -28,7 +28,7 @@ Index: st-patches/st/config.def.h
  
  /* selection timeouts (in milliseconds) */
  static unsigned int doubleclicktimeout = 300;
-@@ -54,7 +56,7 @@ static unsigned int cursorthickness = 2;
+@@ -63,7 +65,7 @@ static unsigned int cursorthickness = 2;
  static int bellvolume = 0;
  
  /* TERM value */
@@ -37,7 +37,7 @@ Index: st-patches/st/config.def.h
  
  static unsigned int tabspaces = 8;
  
-@@ -62,29 +64,29 @@ static unsigned int tabspaces = 8;
+@@ -71,29 +73,29 @@ static unsigned int tabspaces = 8;
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
  	/* 8 normal colors */
@@ -84,7 +84,7 @@ Index: st-patches/st/config.def.h
  };
  
  
-@@ -92,8 +94,8 @@ static const char *colorname[] = {
+@@ -101,8 +103,8 @@ static const char *colorname[] = {
   * Default colors (colorname index)
   * foreground, background, cursor
   */
@@ -94,4 +94,4 @@ Index: st-patches/st/config.def.h
 +static unsigned int defaultbg = 15;
  static unsigned int defaultcs = 256;
  
- /*
+ 
