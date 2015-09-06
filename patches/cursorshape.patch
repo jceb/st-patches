@@ -1,0 +1,33 @@
+Index: st-patches/st/config.def.h
+===================================================================
+--- st-patches.orig/st/config.def.h
++++ st-patches/st/config.def.h
+@@ -108,6 +108,15 @@ static unsigned int defaultfg = 0;
+ static unsigned int defaultbg = 15;
+ static unsigned int defaultcs = 256;
+ 
++/*
++ * Default shape of cursor
++ * 2: Block
++ * 4: Underline
++ * 6: IBeam
++ */
++
++static unsigned int cursorshape = 6;
++
+ 
+ /*
+  * Default colour and shape of the mouse cursor
+Index: st-patches/st/st.c
+===================================================================
+--- st-patches.orig/st/st.c
++++ st-patches/st/st.c
+@@ -4307,7 +4307,7 @@ main(int argc, char *argv[])
+ 
+ 	xw.l = xw.t = 0;
+ 	xw.isfixed = False;
+-	xw.cursor = 0;
++	xw.cursor = cursorshape;
+ 
+ 	ARGBEGIN {
+ 	case 'a':
