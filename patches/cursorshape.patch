@@ -13,7 +13,7 @@ Index: st-patches/st/config.def.h
 + * 6: IBeam
 + */
 +
-+static unsigned int cursorshape = 6;
++static unsigned int cursorshape = 2;
 +
  
  /*
