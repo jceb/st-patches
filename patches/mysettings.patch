@@ -95,4 +95,4 @@ Index: st-patches/st/config.def.h
 +static unsigned int defaultbg = 15;
  static unsigned int defaultcs = 256;
  
- 
+ /*
