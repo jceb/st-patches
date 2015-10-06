@@ -29,16 +29,15 @@ Index: st-patches/st/config.def.h
  
  /* selection timeouts (in milliseconds) */
  static unsigned int doubleclicktimeout = 300;
-@@ -63,7 +66,7 @@ static unsigned int cursorthickness = 2;
+@@ -63,37 +66,37 @@ static unsigned int cursorthickness = 2;
  static int bellvolume = 0;
  
- /* TERM value */
+ /* default TERM value */
 -static char termname[] = "st-256color";
 +static char termname[] = "st-meta-256color";
  
  static unsigned int tabspaces = 8;
  
-@@ -71,29 +74,29 @@ static unsigned int tabspaces = 8;
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
  	/* 8 normal colors */
@@ -80,19 +79,20 @@ Index: st-patches/st/config.def.h
  	[255] = 0,
  
  	/* more colors can be added after 255 to use with DefaultXX */
--	"#cccccc",
+ 	"#cccccc",
+-	"#555555",
 +	"#87afd7",
  };
  
  
 @@ -101,8 +104,8 @@ static const char *colorname[] = {
   * Default colors (colorname index)
-  * foreground, background, cursor
+  * foreground, background, cursor, reverse cursor
   */
 -static unsigned int defaultfg = 7;
 -static unsigned int defaultbg = 0;
 +static unsigned int defaultfg = 0;
 +static unsigned int defaultbg = 15;
  static unsigned int defaultcs = 256;
+ static unsigned int defaultrcs = 257;
  
- /*
