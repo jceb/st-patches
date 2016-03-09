@@ -16,7 +16,7 @@ Index: st-patches/st/st.c
 ===================================================================
 --- st-patches.orig/st/st.c
 +++ st-patches/st/st.c
-@@ -335,6 +335,7 @@ static void printsel(const Arg *);
+@@ -336,6 +336,7 @@ static void printsel(const Arg *);
  static void printscreen(const Arg *) ;
  static void toggleprinter(const Arg *);
  static void sendbreak(const Arg *);
@@ -24,7 +24,7 @@ Index: st-patches/st/st.c
  
  /* Config.h for applying patches and the configuration. */
  #include "config.h"
-@@ -4413,3 +4414,64 @@ run:
+@@ -4406,3 +4407,64 @@ run:
  	return 0;
  }
  
