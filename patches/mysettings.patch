@@ -81,8 +81,8 @@ Index: st-patches/st/config.def.h
  	/* more colors can be added after 255 to use with DefaultXX */
 -	"#cccccc",
 -	"#555555",
-+	"#8959a8",
-+	"#8959a8",
++	"#d70000",
++	"#d70000",
  };
  
  
