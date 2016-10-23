@@ -4,10 +4,10 @@ Index: st-patches/st/config.def.h
 ===================================================================
 --- st-patches.orig/st/config.def.h
 +++ st-patches/st/config.def.h
-@@ -175,6 +175,7 @@ static Shortcut shortcuts[] = {
- 	{ MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
+@@ -176,6 +176,7 @@ static Shortcut shortcuts[] = {
  	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
  	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
+ 	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
 +	{ MODKEY,               XK_y,           copyurl,        {.i =  0} },
  };
  
@@ -16,15 +16,15 @@ Index: st-patches/st/st.c
 ===================================================================
 --- st-patches.orig/st/st.c
 +++ st-patches/st/st.c
-@@ -340,6 +340,7 @@ static void printsel(const Arg *);
- static void printscreen(const Arg *) ;
+@@ -344,6 +344,7 @@ static void printscreen(const Arg *) ;
+ static void iso14755(const Arg *);
  static void toggleprinter(const Arg *);
  static void sendbreak(const Arg *);
 +static void copyurl(const Arg *);
  
  /* Config.h for applying patches and the configuration. */
  #include "config.h"
-@@ -4469,3 +4470,64 @@ run:
+@@ -4497,3 +4498,64 @@ run:
  	return 0;
  }
  
