@@ -4,7 +4,7 @@ Index: st-patches/st/config.def.h
 ===================================================================
 --- st-patches.orig/st/config.def.h
 +++ st-patches/st/config.def.h
-@@ -176,6 +176,7 @@ static Shortcut shortcuts[] = {
+@@ -174,6 +174,7 @@ static Shortcut shortcuts[] = {
  	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
  	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
  	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
@@ -24,7 +24,7 @@ Index: st-patches/st/st.c
  
  /* Config.h for applying patches and the configuration. */
  #include "config.h"
-@@ -4497,3 +4498,64 @@ run:
+@@ -4525,3 +4526,64 @@ run:
  	return 0;
  }
  
