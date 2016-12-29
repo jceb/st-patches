@@ -57,7 +57,7 @@ Index: st-patches/st/config.def.h
 +	"#4271AE",
 +	"#8959A8",
 +	"#3E999F",
-+	"#9e9e9e",
++	"#EDEDED",
  
  	/* 8 bright colors */
 -	"gray50",
@@ -68,7 +68,7 @@ Index: st-patches/st/config.def.h
 -	"magenta",
 -	"cyan",
 -	"white",
-+	"#969694",
++	"#4D4D4C",
 +	"#D7005F",
 +	"#718C00",
 +	"#D75F00",
