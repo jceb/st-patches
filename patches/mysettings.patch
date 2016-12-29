@@ -50,13 +50,13 @@ Index: st-patches/st/config.def.h
 -	"magenta3",
 -	"cyan3",
 -	"gray90",
-+	"#222222",
-+	"#af0000",
-+	"#008700",
-+	"#af8700",
-+	"#87afd7",
-+	"#870087",
-+	"#0087af",
++	"#4D4D4C",
++	"#D7005F",
++	"#718C00",
++	"#D75F00",
++	"#4271AE",
++	"#8959A8",
++	"#3E999F",
 +	"#9e9e9e",
  
  	/* 8 bright colors */
@@ -68,22 +68,22 @@ Index: st-patches/st/config.def.h
 -	"magenta",
 -	"cyan",
 -	"white",
-+	"#6a6a6a",
-+	"#d70000",
-+	"#00af00",
-+	"#ffaf00",
-+	"#0087d7",
-+	"#af00af",
-+	"#00afd7",
-+	"#eeeeee",
++	"#969694",
++	"#D7005F",
++	"#718C00",
++	"#D75F00",
++	"#4271AE",
++	"#8959A8",
++	"#3E999F",
++	"#F5F5F5",
  
  	[255] = 0,
  
  	/* more colors can be added after 255 to use with DefaultXX */
 -	"#cccccc",
 -	"#555555",
-+	"#d70000",
-+	"#d70000",
++	"#D7005F",
++	"#D7005F",
  };
  
  
