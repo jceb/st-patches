@@ -1,0 +1,35 @@
+Index: st-patches/st/st.c
+===================================================================
+--- st-patches.orig/st/st.c
++++ st-patches/st/st.c
+@@ -1901,6 +1901,7 @@ strhandle(void)
+ 		return;
+ 	case 'P': /* DCS -- Device Control String */
+ 		term.mode |= ESC_DCS;
++		printf("sixel start\n");
+ 	case '_': /* APC -- Application Program Command */
+ 	case '^': /* PM -- Privacy Message */
+ 		return;
+@@ -2375,6 +2376,7 @@ tputc(Rune u)
+ 			term.esc &= ~(ESC_START|ESC_STR|ESC_DCS);
+ 			if (IS_SET(MODE_SIXEL)) {
+ 				/* TODO: render sixel */;
++				printf("sixel\n");
+ 				term.mode &= ~MODE_SIXEL;
+ 				return;
+ 			}
+@@ -2385,10 +2387,13 @@ tputc(Rune u)
+ 
+ 		if (IS_SET(MODE_SIXEL)) {
+ 			/* TODO: implement sixel mode */
++				printf("sixel2\n");
+ 			return;
+ 		}
+-		if (term.esc&ESC_DCS && strescseq.len == 0 && u == 'q')
++		if (term.esc&ESC_DCS && strescseq.len == 0 && u == 'q') {
++				printf("sixel disalbed\n");
+ 			term.mode |= MODE_SIXEL;
++		}
+ 
+ 		if (strescseq.len+len >= sizeof(strescseq.buf)-1) {
+ 			/*
