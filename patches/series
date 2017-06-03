@@ -1,3 +1,5 @@
 mysettings.patch
 terminfo_color_change.patch
+fix-keyboard-input.patch
+fix-keyboard-input-legacy-settings.patch
 sixel.patch
