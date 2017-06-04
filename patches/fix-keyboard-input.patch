@@ -189,7 +189,7 @@ Index: st-patches/st/config.def.h
  	{ XK_F1,            XK_NO_MOD,      "\033OP" ,       0,    0,    0},
  	{ XK_F1, /* F13 */  ShiftMask,      "\033[1;2P",     0,    0,    0},
  	{ XK_F1, /* F25 */  ControlMask,    "\033[1;5P",     0,    0,    0},
-@@ -443,6 +467,574 @@ static Key key[] = {
+@@ -443,6 +467,573 @@ static Key key[] = {
  	{ XK_F33,           XK_NO_MOD,      "\033[20;5~",    0,    0,    0},
  	{ XK_F34,           XK_NO_MOD,      "\033[21;5~",    0,    0,    0},
  	{ XK_F35,           XK_NO_MOD,      "\033[23;5~",    0,    0,    0},
@@ -749,7 +749,6 @@ Index: st-patches/st/config.def.h
 +	{ XK_semicolon,    Mod1Mask|ControlMask,           "\033[59;7u",  0,  0,  0},
 +	{ XK_semicolon,    Mod1Mask|ControlMask|ShiftMask, "\033[59;8u",  0,  0,  0},
 +	{ XK_semicolon,    Mod1Mask|ShiftMask,             "\033[59;4u",  0,  0,  0},
-+	{ XK_slash,        ControlMask,                    "\033[47;5u",  0,  0,  0},
 +	{ XK_slash,        ControlMask|ShiftMask,          "\033[47;6u",  0,  0,  0},
 +	{ XK_slash,        Mod1Mask,                       "\033[47;3u",  0,  0,  0},
 +	{ XK_slash,        Mod1Mask|ControlMask,           "\033[47;7u",  0,  0,  0},
