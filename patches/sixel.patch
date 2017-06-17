@@ -2,7 +2,7 @@ Index: st-patches/st/st.c
 ===================================================================
 --- st-patches.orig/st/st.c
 +++ st-patches/st/st.c
-@@ -1901,6 +1901,7 @@ strhandle(void)
+@@ -1904,6 +1904,7 @@ strhandle(void)
  		return;
  	case 'P': /* DCS -- Device Control String */
  		term.mode |= ESC_DCS;
@@ -10,7 +10,7 @@ Index: st-patches/st/st.c
  	case '_': /* APC -- Application Program Command */
  	case '^': /* PM -- Privacy Message */
  		return;
-@@ -2375,6 +2376,7 @@ tputc(Rune u)
+@@ -2378,6 +2379,7 @@ tputc(Rune u)
  			term.esc &= ~(ESC_START|ESC_STR|ESC_DCS);
  			if (IS_SET(MODE_SIXEL)) {
  				/* TODO: render sixel */;
@@ -18,7 +18,7 @@ Index: st-patches/st/st.c
  				term.mode &= ~MODE_SIXEL;
  				return;
  			}
-@@ -2385,10 +2387,13 @@ tputc(Rune u)
+@@ -2388,10 +2390,13 @@ tputc(Rune u)
  
  		if (IS_SET(MODE_SIXEL)) {
  			/* TODO: implement sixel mode */
