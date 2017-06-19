@@ -2,7 +2,7 @@ Index: st-patches/st/config.def.h
 ===================================================================
 --- st-patches.orig/st/config.def.h
 +++ st-patches/st/config.def.h
-@@ -836,7 +836,7 @@ static Key key[] = {
+@@ -835,7 +835,7 @@ static Key key[] = {
  	{ XK_4,            Mod1Mask|ControlMask,           "\033[52;7u",  0,  0,  0},
  	{ XK_5,            ControlMask,                    "\033[53;5u",  0,  0,  0},
  	{ XK_5,            Mod1Mask|ControlMask,           "\033[53;7u",  0,  0,  0},
@@ -11,7 +11,7 @@ Index: st-patches/st/config.def.h
  	{ XK_6,            Mod1Mask|ControlMask,           "\033[54;7u",  0,  0,  0},
  	{ XK_7,            ControlMask,                    "\033[55;5u",  0,  0,  0},
  	{ XK_7,            Mod1Mask|ControlMask,           "\033[55;7u",  0,  0,  0},
-@@ -904,7 +904,7 @@ static Key key[] = {
+@@ -903,7 +903,7 @@ static Key key[] = {
  	{ XK_braceright,   Mod1Mask|ControlMask,           "\033[125;7u", 0,  0,  0},
  	{ XK_braceright,   Mod1Mask|ControlMask|ShiftMask, "\033[125;8u", 0,  0,  0},
  	{ XK_braceright,   Mod1Mask|ShiftMask,             "\033[125;4u", 0,  0,  0},
