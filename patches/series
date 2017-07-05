@@ -1,4 +1,5 @@
 mysettings.patch
 fix-keyboard-input.patch
 fix-keyboard-input-legacy-settings.patch
+tmux_S-Space.patch
 sixel.patch
