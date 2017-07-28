@@ -3,4 +3,5 @@ fix-keyboard-input.patch
 fix-keyboard-input-legacy-settings.patch
 tmux_S-Space.patch
 real_escape.patch
+tmux_S-Space_real.patch
 sixel.patch

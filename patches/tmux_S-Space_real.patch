@@ -1,0 +1,13 @@
+Index: st-patches/st/config.def.h
+===================================================================
+--- st-patches.orig/st/config.def.h
++++ st-patches/st/config.def.h
+@@ -794,7 +794,7 @@ static Key key[] = {
+ 	{ XK_space,        Mod1Mask|ControlMask|ShiftMask, "\23332;8u",  0,  0,  0},
+ 	{ XK_space,        Mod1Mask|ShiftMask,             "\23332;4u",  0,  0,  0},
+ 	// workaround in order to be able to use S-Space/S-F1 as prefix for tmux
+-	{ XK_space,        ShiftMask,                      "\2331;2P",   0,  0,  0},
++	{ XK_space,        ShiftMask,                      "\033[1;2P",   0,  0,  0},
+ 	{ XK_0,            ControlMask,                    "\23348;5u",  0,  0,  0},
+ 	{ XK_A,            ControlMask|ShiftMask,          "\23365;6u",  0,  0,  0},
+ 	{ XK_B,            ControlMask|ShiftMask,          "\23366;6u",  0,  0,  0},
