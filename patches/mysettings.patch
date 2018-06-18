@@ -12,32 +12,32 @@ Index: st-patches/st/config.def.h
   *
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
   */
--char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-+char font[] = "Hack:pixelsize=11:antialias=true:autohint=false";
- int borderpx = 2;
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "Hack:pixelsize=11:antialias=true:autohint=false";
+ static int borderpx = 2;
  
  /*
-@@ -32,7 +32,7 @@ float chscale = 1.0;
+@@ -32,7 +32,7 @@ static float chscale = 1.0;
   *
   * More advanced example: " `'\"()[]{}"
   */
--static char worddelimiters[] = " ";
-+static char worddelimiters[] = " |│┤├┬┴\"`'„“«»&()[]{}*,;<>=?@^#\042\047:";
+-char *worddelimiters = " ";
++char *worddelimiters = " |│┤├┬┴\"`'„“«»&()[]{}*,;<>=?@^#\042\047:";
  
  /* selection timeouts (in milliseconds) */
- unsigned int doubleclicktimeout = 300;
-@@ -63,7 +63,7 @@ unsigned int cursorthickness = 2;
+ static unsigned int doubleclicktimeout = 300;
+@@ -63,7 +63,7 @@ static unsigned int cursorthickness = 2;
  static int bellvolume = 0;
  
  /* default TERM value */
--char termname[] = "st-256color";
-+char termname[] = "st-meta-256color";
+-char *termname = "st-256color";
++char *termname = "st-meta-256color";
  
  /*
   * spaces per tab
-@@ -85,30 +85,30 @@ static unsigned int tabspaces = 8;
+@@ -85,30 +85,30 @@ unsigned int tabspaces = 8;
  /* Terminal colors (16 first used in escape sequence) */
- const char *colorname[] = {
+ static const char *colorname[] = {
  	/* 8 normal colors */
 -	"black",
 -	"red3",
@@ -84,7 +84,7 @@ Index: st-patches/st/config.def.h
  };
  
  
-@@ -116,8 +116,8 @@ const char *colorname[] = {
+@@ -116,8 +116,8 @@ static const char *colorname[] = {
   * Default colors (colorname index)
   * foreground, background, cursor, reverse cursor
   */
@@ -92,10 +92,10 @@ Index: st-patches/st/config.def.h
 -unsigned int defaultbg = 0;
 +unsigned int defaultfg = 0;
 +unsigned int defaultbg = 7;
- unsigned int defaultcs = 256;
- unsigned int defaultrcs = 257;
+ static unsigned int defaultcs = 256;
+ static unsigned int defaultrcs = 257;
  
-@@ -178,6 +178,7 @@ Shortcut shortcuts[] = {
+@@ -178,6 +178,7 @@ static Shortcut shortcuts[] = {
  	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
  	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
  	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
