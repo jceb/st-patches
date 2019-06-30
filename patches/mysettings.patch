@@ -19,10 +19,10 @@ Index: st-patches/st/config.def.h
  /*
 @@ -32,7 +32,7 @@ static float chscale = 1.0;
   *
-  * More advanced example: " `'\"()[]{}"
+  * More advanced example: L" `'\"()[]{}"
   */
--char *worddelimiters = " ";
-+char *worddelimiters = " |│┤├┬┴\"`'„“«»&()[]{}*,;<>=?@^#\042\047:";
+-wchar_t *worddelimiters = L" ";
++wchar_t *worddelimiters = L" |│┤├┬┴\"`'„“«»&()[]{}*,;<>=?@^#\042\047:";
  
  /* selection timeouts (in milliseconds) */
  static unsigned int doubleclicktimeout = 300;
@@ -95,11 +95,3 @@ Index: st-patches/st/config.def.h
  static unsigned int defaultcs = 256;
  static unsigned int defaultrcs = 257;
  
-@@ -178,6 +178,7 @@ static Shortcut shortcuts[] = {
- 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
- 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
- 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
-+	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
- };
- 
- /*
