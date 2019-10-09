@@ -35,10 +35,11 @@ Index: st-patches/st/config.def.h
  
  /*
   * spaces per tab
-@@ -85,30 +85,30 @@ unsigned int tabspaces = 8;
+@@ -84,31 +84,57 @@ unsigned int tabspaces = 8;
+ 
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
- 	/* 8 normal colors */
+-	/* 8 normal colors */
 -	"black",
 -	"red3",
 -	"green3",
@@ -47,14 +48,17 @@ Index: st-patches/st/config.def.h
 -	"magenta3",
 -	"cyan3",
 -	"gray90",
-+	"#4D4D4C", // 0 black
-+	"#D7005F", // 1 red
-+	"#718C00", // 2 green
-+	"#D75F00", // 3 yellow
-+	"#005f87", // 4 blue
-+	"#8959A8", // 5 magenta
-+	"#3E999F", // 6 cyan
-+	"#EDEDED", // 7 white
++
++    // onedark
++    /* 8 normal colors */
++    "#282c34", // 0 black
++    "#e06c75", // 1 red
++    "#98c379", // 2 green
++    "#d19a66", // 3 yellow
++    "#61afef", // 4 blue
++    "#c678dd", // 5 magenta
++    "#56b6c2", // 6 cyan
++    "#abb2bf", // 7 white
  
  	/* 8 bright colors */
 -	"gray50",
@@ -65,33 +69,47 @@ Index: st-patches/st/config.def.h
 -	"magenta",
 -	"cyan",
 -	"white",
-+	"#969694", // 8  black
-+	"#D7005F", // 9  red
-+	"#718C00", // 10 green
-+	"#D75F00", // 11 yellow
-+	"#4271AE", // 12 blue
-+	"#8959A8", // 13 magenta
-+	"#3E999F", // 14 cyan
-+	"#F5F5F5", // 15 white
++    "#5c6370", // 8  black
++    "#e06c75", // 9  red
++    "#98c379", // 10 green
++    "#d19a66", // 11 yellow
++    "#61afef", // 12 blue
++    "#c678dd", // 13 magenta
++    "#56b6c2", // 14 cyan
++    "#ffffff", // 15 white
++
++
++    // // papercolor
++	// /* 8 normal colors */
++	// "#4D4D4C", // 0 black
++	// "#D7005F", // 1 red
++	// "#718C00", // 2 green
++	// "#D75F00", // 3 yellow
++	// "#005f87", // 4 blue
++	// "#8959A8", // 5 magenta
++	// "#3E999F", // 6 cyan
++	// "#EDEDED", // 7 white
++	// /* 8 bright colors */
++	// "#969694", // 8  black
++	// "#D7005F", // 9  red
++	// "#718C00", // 10 green
++	// "#D75F00", // 11 yellow
++	// "#4271AE", // 12 blue
++	// "#8959A8", // 13 magenta
++	// "#3E999F", // 14 cyan
++	// "#F5F5F5", // 15 white
  
  	[255] = 0,
  
- 	/* more colors can be added after 255 to use with DefaultXX */
+-	/* more colors can be added after 255 to use with DefaultXX */
 -	"#cccccc",
 -	"#555555",
-+	"#87afd7",
-+	"#87afd7",
++	// /* more colors can be added after 255 to use with DefaultXX */
++	// "#87afd7",
++	// "#87afd7",
++
++	"#abb2bf",
++	"#abb2bf",
  };
  
- 
-@@ -116,8 +116,8 @@ static const char *colorname[] = {
-  * Default colors (colorname index)
-  * foreground, background, cursor, reverse cursor
-  */
--unsigned int defaultfg = 7;
--unsigned int defaultbg = 0;
-+unsigned int defaultfg = 0;
-+unsigned int defaultbg = 7;
- static unsigned int defaultcs = 256;
- static unsigned int defaultrcs = 257;
  
